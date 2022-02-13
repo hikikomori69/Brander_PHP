@@ -22,5 +22,3 @@ function getDay (int $DayNumber) : string
         return $collections[$DayNumber - 1];
     }   
 }
-
-echo getDay(7);
