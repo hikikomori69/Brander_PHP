@@ -11,4 +11,3 @@ function getMaxNumber(int $FirstNumber, int $SecondNumber, int $ThirdNumber) : i
     $collections = [$FirstNumber, $SecondNumber, $ThirdNumber];
     return max($collections);
 }
-
