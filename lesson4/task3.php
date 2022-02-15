@@ -4,7 +4,7 @@
                 Написать функцию которая проверяет является ли число простым или нет
                 (продвинутый уровень - использовтаь рекурсию)
 */
-function Prime_Number(int $num) : bool
+function PrimeNumber(int $num) : bool
 {
     if ($num ==  0 ){
         return false;
@@ -17,7 +17,7 @@ function Prime_Number(int $num) : bool
     return true;
 }
 
-function Prime_Number_Recursive(int $num) : bool{
+function PrimeNumberRecursive(int $num) : bool{
     if ( $num == 0){
         return false;
     }  
@@ -30,9 +30,7 @@ function Prime_Number_Recursive(int $num) : bool{
             return false;
         }
         $counter++;
-        return Prime_Number_Recursive($num);
+        return PrimeNumberRecursive($num);
     }
     $counter--;
 }
-
-var_dump(Prime_Number_Recursive(31));

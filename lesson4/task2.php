@@ -7,7 +7,7 @@
 
 function getDay (int $DayNumber) : string
 {
-    if ( 8 < $DayNumber || $DayNumber < 1 ){
+    if ( 7 < $DayNumber || $DayNumber < 1 ){
         return 'unknown day of the week. Please, write correct number';
     } else {
         $collections = [

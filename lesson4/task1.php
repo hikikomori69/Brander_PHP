@@ -8,6 +8,17 @@
 
 function getMaxNumber(int $FirstNumber, int $SecondNumber, int $ThirdNumber) : int
 {
-    $collections = [$FirstNumber, $SecondNumber, $ThirdNumber];
-    return max($collections);
+    if ( $FirstNumber >= $SecondNumber) {
+        if ($FirstNumber >= $ThirdNumber){
+            return $FirstNumber;
+        } else {
+            return $ThirdNumber;
+        }
+    } else {
+        if ($SecondNumber >= $ThirdNumber){
+            return $SecondNumber;
+        } else {
+            return $ThirdNumber;
+        }
+    }
 }
