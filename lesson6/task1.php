@@ -6,7 +6,8 @@
 б) места в кинотеатре
 в) список оценок по предметам(предметы выбирайте сами)
 */
-$StarWars = ['Episode IV – A New Hope',
+$collections = [
+    $StarWars = ['Episode IV – A New Hope',
                    'Episode V – The Empire Strikes Back',
                    'Episode VI – Return of the Jedi',
                    'Episode I – The Phantom Menace',
@@ -14,14 +15,14 @@ $StarWars = ['Episode IV – A New Hope',
                    'Episode III – Revenge of the Sith',
                    'Episode VII – The Force Awakens',
                    'Episode VIII – The Last Jedi',
-                   'Episode IX – The Rise of Skywalker'] ;
+                   'Episode IX – The Rise of Skywalker'],
                       
-$CimemaSeats  = ['reserved' => 1,
+    $CimemaSeats  = ['reserved' => 1,
                       'free' => 4,
                       'occupied' => 7,
-                      'vip' => 6];
+                      'vip' => 6],
     
-$Marks = ['math' => 11,
+    $Marks = ['math' => 11,
           'chemistry' => 10,
           'english' => 8,
-          'ukrainian_language' => 9];
+          'ukrainian_language' => 9]];
