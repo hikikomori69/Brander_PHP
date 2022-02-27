@@ -10,19 +10,17 @@ function getDirectoryInfo(string $path)
                 if ($file == '.' || $file == '..'){
                     continue;
                 }
-                if (is_dir ("$path/$file") ) {
-                    echo (str_repeat("&nbsp", 4 * $recursionDeep) . "D - $file") . '   ----   ';
+                if (is_dir ("$path/$file") ) { 
+                    echo (str_repeat(" ", 4 * $recursionDeep) . "D - $file") . '   ----   ';
                     echo substr(sprintf("%o", fileperms("$path/$file")), -3) . '    size --- ';
-                    echo filesize("$path/$file") . 'B';
-                    echo '<br>';
+                    echo filesize("$path/$file") . 'B' . PHP_EOL;
                     $recursionDeep++;
                     getDirectoryInfo("$path/$file");
                     $recursionDeep--;
                 } else {
-                    echo str_repeat("&nbsp", 4 * $recursionDeep) . "F - $file" . '   ----   ' ;
+                    echo str_repeat(" ", 4 * $recursionDeep) . "F - $file" . '   ----   ' ;
                     echo substr(sprintf("%o", fileperms("$path/$file")), -3) . '    size --- ';
-                    echo filesize("$path/$file") . 'B';
-                    echo '<br>';
+                    echo filesize("$path/$file") . 'B' . PHP_EOL;
                 }
             }
         } else {
@@ -35,5 +33,8 @@ function getDirectoryInfo(string $path)
         return 'file does not exist';
     }
 }
-
-echo getDirectoryInfo('/home/smooth9/Desktop/PHP_BRANDER/lesson7/task1/');
+if (isset($argv[1])){
+    echo getDirectoryInfo($argv[1]);
+} else {
+    echo 'Warning! Required first agrement as path. 0 given';
+}
